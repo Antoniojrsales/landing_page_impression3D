@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;700&display=swap');
+
+:root{
+    --text-color-white:#ffffff;
+    --text-color-black:#000000;
+    --bg-color-01:#dfdfdf;
+    --color-00:#0000001a;
+    --color-03:#471b96;
+    --color-04:#c0c0c0;
+    --color-05:#232323;
+    --color-06:#004ea2;
+    --color-07:#666;
+    --color-09:#6600ff;
+    --color-10:#3333ff;
+    --color-11:#212d80;
+}
+
+/* Estilos globais */
+*{
+    margin: 0; /* Remove todas as margens externas padrão dos elementos */
+    padding: 0; /* Remove todos os preenchimentos internos padrão dos elementos */
+    box-sizing: border-box; /* Define o modelo de caixa para incluir bordas e preenchimentos dentro da largura/altura */
+    text-decoration: none;/* Remove sublinhados ou outros estilos decorativos padrão dos textos (como em links) */
+    border: none; /* Remove bordas padrão de elementos como botões ou campos de entrada */
+    scroll-behavior: smooth; /* Torna o comportamento de rolagem mais suave, ideal para âncoras e navegações */
+}
+
+html {
+    font-family: 'Poppins', sans-serif; /* Define a fonte principal do documento */
+    font-size: 16px; /* Define o tamanho base da fonte */
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    min-height: 100vh;
+    background-color: var(--bg-color-01);
+    overflow-x: hidden; /* Evita rolagem horizontal */
+    gap: 10px;
+}
+
+/* /Estilos globais */
+
+/* btn */
+.btn{
+    background-color: black;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+    transform: scale(1.05);
+}
+
+.btn:focus {
+    outline: none; /* Remove o contorno no estado de foco */
+}
+/* /btn */
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 50px 10%;
+    background: #f8f8f2; /* Ajuste conforme necessário */
+    position: fixed;
+    top: 0;
+}
+
+/* Seção da esquerda */
+.left-section {
+    width: 50%;
+    height: auto;
+    background-color: #f8f8f2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 5%; /* Para dar um respiro no texto */
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #000;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: var(--color-09);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.3s ease-in-out;
+}
+
+.nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* Conteúdo principal */
+.content {
+    max-width: 700px;
+    margin: auto;
+    padding: 40px 20px;
+    text-align: left;
+}
+
+.content h1 {
+    font-size: 36px;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.content h2 {
+    font-size: 24px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.content p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.swiper {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: auto;
+}
+
+.left-section, .gallery-container {
+    margin: 0; /* Força remoção de qualquer margem */;
+    overflow: hidden; /* Garante que o conteúdo não ultrapasse o container */
+    flex: 1 !important; /* Ambos ocuparão 50% do espaço */
+    max-width: 50% !important;
+}
+
+.gallery-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery-container img {
+    width: 100%; /* Faz a imagem ocupar o espaço da div */
+    height: auto;
+    display: block;
+}

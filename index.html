@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page Impressões 3D</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+</head>
+<body>
+    <section class="hero">
+        <div class="left-section">
+            <header class="header">
+                <div class="logo">Working3D</div>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">Sobre nós</a></li>
+                        <li><a href="#service">Serviços</a></li>
+                        <li><a href="#portfolio">Portfólio</a></li>
+                        <li><a href="#contact">Contato</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <section class="content">
+                <h1>Transforme suas ideias em realidade com Impressão 3D de alta precisão!</h1>
+                <h2>Qualidade e rapidez, sem complicações!</h2>
+                <p>Imprima seus projetos 3D com rapidez, precisão e alta qualidade. Na Working3D, contamos com uma 3D Print Farm equipada com mais de dez impressoras de última geração, prontas para transformar suas ideias em realidade.</p>
+                <button class="btn">Peça um Orçamento Grátis Agora!</button>
+            </section>
+        </div>
+
+        <div class="gallery-container">
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="img/impressao3d.jpg" alt="Imagem 1"></div>
+                    <div class="swiper-slide"><img src="img/print3d.jpg" alt="Imagem 2"></div>
+                    <div class="swiper-slide"><img src="img/img3.jpg" alt="Imagem 3"></div>
+                </div>
+                <!-- Botões de navegação -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+    </section>
+    
+    <script>
+        var swiper = new Swiper(".swiper", {
+            loop: true,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
+
+</body>
+</html>
