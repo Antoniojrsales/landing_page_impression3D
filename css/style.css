@@ -3,7 +3,7 @@
 :root{
     --text-color-white:#ffffff;
     --text-color-black:#000000;
-    --bg-color-01:#dfdfdf;
+    --bg-color-01:#dadada;
     --color-00:#0000001a;
     --color-03:#471b96;
     --color-04:#c0c0c0;
@@ -131,7 +131,7 @@ header{
     gap: 10px;
     font-size: 1.2rem;
     color: #333;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .benefit i {
@@ -147,7 +147,7 @@ header{
     font-size: 36px;
     font-weight: bold;
     color: #222;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     
 }
 
@@ -192,6 +192,7 @@ header{
     gap: 50px;
     height: auto;
     text-align: center;
+    background: var(--color-00);
 }
 
 .about-photo img {
