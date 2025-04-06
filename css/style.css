@@ -294,7 +294,7 @@ header{
 /* Estilo para o carrossel em linha (Swiper) */
 .portfolio {
     padding: 20px;
-    background-color: var(--bg-color-01); /* Fundo suave */
+    background-color: var(--text-color-white); /* Fundo suave */
     text-align: center;
     color: #333;
 }
@@ -336,6 +336,14 @@ header{
     width: 400px;
     height: 400px;
     object-fit: cover; /* Ajusta a imagem para preencher o card */
+    transition: all 0.3s ease-in-out;
+    border-radius: 15px;
+}
+
+.card-link img:hover{
+    border-color: #005bb5;
+    transform: scale(1.05);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Ajustes para o Swiper */
@@ -370,6 +378,140 @@ header{
 .swiper-pagination-bullet-active {
     background-color: #019ca0;
 }  
+
+/* Formulario */
+.contact{
+    background: var(--bg-color-01);
+    text-align: center;
+    padding: 2rem;
+    height: auto;
+}
+
+.contact h2{
+    color: var(--text-color-black);
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.contact span{
+    color: var(--color-11);
+}
+
+form{
+    max-width: 45rem;
+    margin: 0.6rem auto;
+    text-align: center;
+    margin-bottom: 2rem;    
+}
+
+form .input-box{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+form .input-box input, form textarea{
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.2rem;
+    color: var(--text-color-black);
+    background-color: var(--text-color-white);
+    border-radius: 0.5rem;
+    margin: 0.4rem 0;
+}
+
+form textarea{
+    resize: none;
+}
+
+.contact-icon-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    text-align: center;
+    margin: 70px;
+    color: var(--color-05);
+}
+
+.contact-icon-content{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0rem 3rem;
+    padding: 1rem;
+}
+
+.contact-icon{
+    height: 40px;
+    width: 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-right: 2rem ;
+
+    background: var(--color-white);
+    padding: 1rem;
+    border-radius: 50%;
+
+}
+
+.contact-icon i{
+    font-size: 2rem;
+    color: var(--color-05);
+}
+
+.contact-info span{
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.contact-info p{
+    margin: 0.25rem 0rem;
+}
+
+.contact-info a{
+    display: block;
+    margin: 0.25rem 0rem;
+    text-decoration: none;
+    color: var(--color-white);
+}
+
+.contact-info a:hover{
+    transition: color .3s ease;
+    color: var(--color-11);
+}
+
+.btn-form{
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    font-weight: bold;
+    color: var(--text-color-black);
+    background: transparent;
+    border: 3px solid var(--color-04);
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s ease;    
+    margin-top: 30px;
+}
+
+.btn-form:hover{
+    border: 3px solid var(--color-07);
+}
+/* === Formulario === */
+
+footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 1.2rem;
+    background-color: var(--color-07);
+    color: var(--text-color-white);
+}
 
 /* Responsividade para telas menores (largura máxima de 768px) */
 
