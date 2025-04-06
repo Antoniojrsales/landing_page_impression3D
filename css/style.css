@@ -115,23 +115,18 @@ header{
 }
 
 .left-section {
-    max-width: 50%;
+    width: 60%;
 }
 
 .hero-benefits {
     display: flex;
-    gap: 30px;
+    gap: 20px;
     margin-top: 20px;
-    justify-content: center;
 }
 
 .benefit {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 1.2rem;
-    color: #333;
-    margin-bottom: 20px;
+    text-align: center;
+    flex: 1;
 }
 
 .benefit i {
@@ -141,27 +136,28 @@ header{
 
 .benefit p {
     font-size: 1rem;
+    margin-top: 20px;
 }
 
 .left-section h1 {
-    font-size: 36px;
+    font-size: 2.5rem;
     font-weight: bold;
     color: #222;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     
 }
 
 .left-section h2 {
-    font-size: 22px;
+    font-size: 1.5rem;
     color: #444;
-    margin: 10px 0;
     margin-bottom: 20px;
 }
 
 .left-section p {
-    font-size: 16px;
+    font-size: 1rem;
     color: #666;
     margin-bottom: 20px;
+    line-height: 1.5;
 }
 
 /* Seção de Imagens */
@@ -176,7 +172,7 @@ header{
     overflow: hidden;
 }
 
-.swiper-slide img {
+.hero-wrapper img {
     width: 550px;  /* Largura fixa */
     height: 550px; /* Altura fixa */
     object-fit: cover; /* Mantém a proporção cortando o excesso */
@@ -187,10 +183,9 @@ header{
 .about {
     display: flex;
     align-items: center;
-    padding: 50px 8%;
-    background: white;
-    gap: 50px;
-    height: auto;
+    justify-content: space-between;
+    padding: 40px;
+    gap: 20px;
     text-align: center;
     background: var(--color-00);
 }
@@ -198,26 +193,25 @@ header{
 .about-photo img {
     width: 400px;
     border-radius: 10px;
-    max-width: 100%;
-    height: auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Efeito de sombra */
 }
 
 .box-about {
-    max-width: 60%;
-    padding: 20px;
+    width: 60%;
 }
 
 .box-about h2 {
-    font-size: 32px;
+    font-size: 2rem;
     font-weight: bold;
     color: #222;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
 }
 
 .box-about h4 {
-    font-size: 20px;
+    font-size: 1rem;
+    line-height: 1.6;
     color: #555;
-    margin-top: 10px;
+    margin-bottom: 20px;
 }
 
 .btn-container {
@@ -296,7 +290,101 @@ header{
 }
 /* /Services */
 
-/* Responsividade */
+/* Portfolio */
+/* Estilo para o carrossel em linha (Swiper) */
+.portfolio {
+    padding: 20px;
+    background-color: var(--bg-color-01); /* Fundo suave */
+    text-align: center;
+    color: #333;
+}
+
+.portfolio h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #222; /* Cor do título */
+}
+
+/* Container do Swiper */
+.container {
+    width: 100%;
+    height: 600px;
+    margin: auto;
+}
+
+.card-wrapper {
+    display: flex;
+    gap: 10px; /* Espaçamento entre os itens */
+    justify-content: center; /* Centraliza os cards horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+}
+
+.card-item {
+    flex-shrink: 0; /* Garante que os itens não sejam redimensionados */
+    width: 200px; /* Define uma largura fixa para os cards */
+    height: 150px; /* Define uma altura fixa */
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.card-item:hover {
+    transform: scale(1.05); /* Efeito de zoom no hover */
+}
+
+.card-link img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover; /* Ajusta a imagem para preencher o card */
+}
+
+/* Ajustes para o Swiper */
+.swiper-wrapper {
+    display: flex;
+    gap: 10px; /* Espaçamento entre os slides */
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    color: #00bcd4;
+    font-size: 1.5rem;
+    z-index: 10; /* Garante que as setas fiquem visíveis acima dos cards */
+    transition: color 0.3s ease;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+    color: #019ca0;
+}
+
+.swiper-pagination-bullet {
+    background-color: #00bcd4;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #019ca0;
+}  
+
+/* Responsividade para telas menores (largura máxima de 768px) */
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Alinha os itens verticalmente */
+        text-align: center; /* Centraliza o texto */
+    }
+
+    .nav ul {
+        flex-direction: column; /* Links em uma única coluna */
+        gap: 10px; /* Espaço reduzido */
+    }
+}
+
 @media (max-width: 768px) {
     .services-container {
         flex-direction: column;
@@ -305,5 +393,49 @@ header{
 
     .services-box {
         width: 90%; /* Ajusta para ocupar mais espaço em telas pequenas */
+    }
+}
+
+/* Responsividade para telas menores (largura máxima de 768px) */
+@media (max-width: 768px) {
+    .portfolio {
+        padding: 20px;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    .card-wrapper {
+        flex-wrap: wrap; /* Ajusta os cards para quebrar linha se necessário */
+        justify-content: center;
+        gap: 10px; /* Espaço reduzido entre os cards */
+    }
+
+    .card-item {
+        width: 100%; /* Cada card ocupa 100% da largura do container */
+        max-width: 200px; /* Define uma largura máxima */
+        height: auto; /* Ajusta a altura automaticamente */
+    }
+
+    .swiper-wrapper {
+        flex-wrap: wrap; /* Permite a quebra de linha para os slides */
+    }
+
+    /* Ajustes para os textos */
+    .portfolio h2 {
+        font-size: 2rem; /* Reduz o tamanho do texto */
+        margin-bottom: 20px;
+    }
+
+    /* Botões de navegação do Swiper */
+    .swiper-button-prev,
+    .swiper-button-next {
+        font-size: 1.2rem; /* Reduz o tamanho das setas */
+    }
+    .hero-wrapper img, .about-photo img, .card-link img {
+        max-width: 90%;
+        margin: auto; /* Centraliza a imagem */
+        display: block; /* Garante que ela seja exibida */
     }
 }

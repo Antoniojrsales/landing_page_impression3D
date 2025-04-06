@@ -6,11 +6,13 @@
     <title>Landing Page Impressões 3D</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
-    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
-    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    
 </head>
 <body>
+    <!-- Header -->
     <header>
         <div class="logo">Working3DPeru</div>
         <nav class="nav">
@@ -23,7 +25,9 @@
             </ul>
         </nav>
     </header>
-    <!-- Hero -->
+    <!-- /Header -->
+
+    <!-- /Hero -->
     <section class="hero" id="hero">
         <div class="left-section">
             <div class="hero-benefits">
@@ -50,15 +54,10 @@
         </div>
 
         <div class="gallery-container">
-            <div class="swiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img src="img/print3d.jpg" alt="Imagem 1"></div>
-                    <div class="swiper-slide"><img src="img/impressao3d.jpg" alt="Imagem 2"></div>
-                    <div class="swiper-slide"><img src="img/img3.jpeg" alt="Imagem 3"></div>
+            <div class="hero">
+                <div class="hero-wrapper">
+                    <img src="img/impression3.jpeg" alt="Imagem 3">
                 </div>
-                <!-- Botões de navegação -->
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
             </div>
         </div>
     </section>
@@ -119,24 +118,98 @@
                 <p class="service-desc">Orientamos você em cada etapa do seu projeto com soluções personalizadas em impressão 3D.</p>
             </div>
         </div>
-    </section>
-    
+    </section>    
     <!-- /Service -->
 
     <!-- Portfolio -->
+    <section class="portfolio" id="portfolio">    
+        <div class="container swiper">
+            <h2>Portfolio</h2>
+            <div class="card-wrapper">
+                <ul class="card-list swiper-wrapper">
+                    <li class="card-item swiper-slide">
+                        <a href="#" class="card-link">
+                        <img src="img/img1.jpg" alt="Imagem 1" />
+                        </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                        <a href="#" class="card-link">
+                        <img src="img/img2.jpg" alt="Imagem 2" />
+                        </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                        <a href="#" class="card-link">
+                        <img src="img/img3.jpg" alt="Imagem 3" />
+                        </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                        <a href="#" class="card-link">
+                        <img src="img/img4.jpg" alt="Imagem 4" />
+                        </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                        <a href="#" class="card-link">
+                        <img src="img/img5.jpg" alt="Imagem 5" />
+                        </a>
+                    </li>
+                </ul>
+        
+                <!-- Pagination and Navigation -->
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>  
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    </section>
     <!-- /Portfolio -->
-
+     
     <!-- Contact -->
-    <!-- /Contact -->    
-    <script>
-        var swiper = new Swiper(".swiper", {
-            loop: true,
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-        });
-    </script>
+    <!-- /Contact -->  
+     
+<script>
+    var heroSwiper = new Swiper(".hero-swiper", {
+        loop: true,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+</script>
 
+<script>
+    const swiper = new Swiper(".card-wrapper", {
+      loop: true,
+      slidesPerView: 1,
+      spaceBetween: 30,
+
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+    },
+  
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+  
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+  
+      breakpoints: {
+        640: {
+          slidesPerView: 1,
+        },
+        768: {
+          slidesPerView: 2,
+        },
+        1024: {
+          slidesPerView: 3,
+        },
+      },
+    });
+  </script>
 </body>
 </html>
