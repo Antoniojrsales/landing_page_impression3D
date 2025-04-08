@@ -60,7 +60,7 @@ header{
     position: fixed;
     width: 100%;
     height: 66px;
-    padding: 0 20px;  
+    padding: 20px 0;  
     background: var(--bg-color-01);
     transition: background 0.3s ease-in-out;
     justify-content: space-between;
@@ -74,16 +74,17 @@ header{
     color: var(--text-color);
     font-weight: 600;
     cursor: default;
+    padding: 20px;
 }
 
 .nav ul {
     display: flex;
-    gap: 20px;
+    gap: 10px;
     list-style: none;
 }
 
 .nav ul li {
-    margin: 0 15px;
+    margin: 0 40px 0px 0px;
 }
 
 .nav ul li a {
@@ -96,6 +97,15 @@ header{
 .nav ul li a:hover {
     color: var(--color-10);
 }
+
+/* Botão hamburguer */
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--text-color-black);
+}
+  
 /* /Header */
 
 /* Hero */
@@ -106,7 +116,7 @@ header{
     text-align: center;
     height: 92vh;
     padding: 50px 10%;
-    background-color: #fdfdfd;
+    background-color: #f9f9f9;
     font-size: 2.5rem;
     font-weight: 700;
     color: var(--text-color-black);
@@ -178,6 +188,7 @@ header{
     object-fit: cover; /* Mantém a proporção cortando o excesso */
     border-radius: 10px; /* (Opcional) Bordas arredondadas para um visual mais moderno */
 }
+/* /Hero */
 
 /* ABOUT SECTION */
 .about {
@@ -226,6 +237,7 @@ header{
     height: auto;
     padding: 20px;
     text-align: center;
+    margin-top: 50px;
 }
 
 .services h2{
@@ -294,38 +306,37 @@ header{
 /* Estilo para o carrossel em linha (Swiper) */
 .portfolio {
     padding: 20px;
-    background-color: var(--text-color-white); /* Fundo suave */
+    background-color: #f9f9f9; /* Fundo suave */
     text-align: center;
     color: #333;
 }
 
 .portfolio h2 {
     font-size: 2.5rem;
-    margin-bottom: 30px;
+    margin-bottom: 2rem;
+    margin-top: 2.5rem;
     color: #222; /* Cor do título */
 }
 
 /* Container do Swiper */
 .container {
     width: 100%;
-    height: 600px;
-    margin: auto;
+    height: 700px;
+    margin: 10px;
 }
 
 .card-wrapper {
     display: flex;
-    gap: 10px; /* Espaçamento entre os itens */
     justify-content: center; /* Centraliza os cards horizontalmente */
     align-items: center; /* Centraliza verticalmente */
 }
 
 .card-item {
     flex-shrink: 0; /* Garante que os itens não sejam redimensionados */
-    width: 200px; /* Define uma largura fixa para os cards */
-    height: 150px; /* Define uma altura fixa */
     border-radius: 10px;
     overflow: hidden;
     transition: transform 0.3s ease;
+    margin-top: 3rem;
 }
 
 .card-item:hover {
@@ -349,7 +360,6 @@ header{
 /* Ajustes para o Swiper */
 .swiper-wrapper {
     display: flex;
-    gap: 10px; /* Espaçamento entre os slides */
 }
 
 .swiper-slide {
@@ -390,7 +400,7 @@ header{
 .contact h2{
     color: var(--text-color-black);
     font-size: 2rem;
-    margin-bottom: 2rem;
+    margin-top: 3.5rem;
 }
 
 .contact span{
@@ -501,7 +511,7 @@ form textarea{
 .btn-form:hover{
     border: 3px solid var(--color-07);
 }
-/* === Formulario === */
+/* /Formulario */
 
 footer{
     display: flex;
@@ -515,18 +525,125 @@ footer{
 
 /* Responsividade para telas menores (largura máxima de 768px) */
 
+/* Responsividade  Header */
 @media (max-width: 768px) {
-    header {
-        flex-direction: column; /* Alinha os itens verticalmente */
-        text-align: center; /* Centraliza o texto */
+    .menu-toggle {
+      display: block;
+      z-index: 1001;
+    }
+  
+    .nav {
+      position: absolute;
+      top: 66px;
+      left: 0;
+      width: 100%;
+      background: var(--bg-color-01);
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px 0;
+    }
+  
+    .nav.active {
+      display: flex;
+    }
+  
+    .nav ul {
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    .nav ul li {
+      margin: 10px 0;
+    }
+  }
+
+/* Responsividade Hero */
+@media (max-width: 1024px) {
+    .hero {
+        flex-direction: column;
+        height: auto;
+        padding: 50px 5%;
+        text-align: center;
     }
 
-    .nav ul {
-        flex-direction: column; /* Links em uma única coluna */
-        gap: 10px; /* Espaço reduzido */
+    .left-section {
+        width: 100%;
+    }
+
+    .gallery-container {
+        max-width: 100%;
+        margin-top: 30px;
+    }
+
+    .hero-wrapper img {
+        width: 100%;
+        height: auto;
+    }
+
+    .hero-benefits {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .benefit {
+        max-width: 300px;
     }
 }
 
+@media (max-width: 768px) {
+    .left-section h1 {
+        font-size: 2rem;
+    }
+
+    .left-section h2 {
+        font-size: 1.2rem;
+    }
+
+    .left-section p {
+        font-size: 0.95rem;
+    }
+
+    .benefit p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 40px 4%;
+    }
+
+    .left-section h1 {
+        font-size: 1.6rem;
+    }
+
+    .left-section h2 {
+        font-size: 1rem;
+    }
+
+    .left-section p {
+        font-size: 0.9rem;
+    }
+
+    .benefit i {
+        font-size: 1.8rem;
+    }
+
+    .benefit p {
+        font-size: 0.85rem;
+    }
+
+    .btn {
+        font-size: 0.9rem;
+        padding: 10px 20px;
+    }
+}
+
+/* Responsividade  About */
+
+/* Responsividade  Services */
 @media (max-width: 768px) {
     .services-container {
         flex-direction: column;
@@ -538,7 +655,7 @@ footer{
     }
 }
 
-/* Responsividade para telas menores (largura máxima de 768px) */
+/* Responsividade  Portfolio */
 @media (max-width: 768px) {
     .portfolio {
         padding: 20px;
@@ -581,3 +698,5 @@ footer{
         display: block; /* Garante que ela seja exibida */
     }
 }
+
+/* Responsividade  Contacto */

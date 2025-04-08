@@ -15,14 +15,15 @@
     <!-- Header -->
     <header>
         <div class="logo">Working3DPeru</div>
-        <nav class="nav">
-            <ul>
-                <li><a href="#hero">Home</a></li>
-                <li><a href="#about">Sobre nosotros</a></li>
-                <li><a href="#services">Servicios</a></li>
-                <li><a href="#portfolio">Portfólio</a></li>
-                <li><a href="#contact">Contacto</a></li>
-            </ul>
+        <div class="menu-toggle" id="menu-toggle">☰</div>
+        <nav class="nav" id="nav">
+          <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">Sobre nosotros</a></li>
+            <li><a href="#services">Servicios</a></li>
+            <li><a href="#portfolio">Portfólio</a></li>
+            <li><a href="#contact">Contacto</a></li>
+          </ul>
         </nav>
     </header>
     <!-- /Header -->
@@ -49,7 +50,10 @@
                 <h1>Haz realidad tus ideas con la impresión 3D de alta precisión!</h1>
                 <h2>Calidad y rapidez, sin complicaciones!</h2>
                 <p>Imprime tus proyectos 3D con rapidez,precision y alta calidad.En Working3DPeru,contamos con una 3D print farm equipada para realizar   con mas de diez impresoras 3d filamento y resina de ultima generacion,listas para transformar tus ideas en realidad.</p>
-                <button class="btn">Solicite una cotización gratuita ahora!</button>
+                <button class="btn" onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })">
+                    Solicite una cotización gratuita ahora!
+                </button>
+                
             </section>
         </div>
 
@@ -80,7 +84,10 @@
 
                 <div class="btn-container">
                     <div>
-                        <button class="btn">Solicite una cotización gratuita ahora!</button>
+                        <button class="btn" onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })">
+                            Solicite una cotización gratuita ahora!
+                        </button>
+                        
                     </div>   
                 </div>  
             </div>
@@ -225,16 +232,6 @@
     <footer>
         <p>Copyright © 2025 by &lt;/AntonioJrSales&gt;. All Rights Reserved.</p>
     </footer>
-     
-<script>
-    var heroSwiper = new Swiper(".hero-swiper", {
-        loop: true,
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
-    });
-</script>
 
 <script>
     const swiper = new Swiper(".card-wrapper", {
@@ -269,6 +266,17 @@
         },
       },
     });
-  </script>
+</script>
+
+<script>
+    const toggle = document.getElementById("menu-toggle");
+    const nav = document.querySelector(".nav");
+  
+    toggle.addEventListener("click", () => {
+      nav.classList.toggle("active");
+    });
+</script>
+  
+
 </body>
 </html>
