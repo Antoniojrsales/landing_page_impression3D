@@ -250,7 +250,6 @@ header{
     padding: 20px;
     text-align: center;
     margin-top: 50px;
-    height: 600px;
 }
 
 .services h2{
@@ -265,6 +264,7 @@ header{
     justify-content: center;
     margin-top: 50px;
     gap: 1.5rem;
+    flex-wrap: wrap;
 }
 
 .services-container, .services-box{
@@ -280,12 +280,14 @@ header{
     border: 2px solid #ddd;
     border-radius: 12px;
     padding: 2rem;
-    width: 300px; /* Tamanho fixo para padronização */
+    width: 100px; 
+    max-width: 300px;
     min-height: 300px;
     display: flex;
     flex-direction: column;
     align-items: center;
     transition: all 0.3s ease-in-out;
+    flex: 1 1 280px;
 }
 
 .services-container, .services-box:hover{
@@ -316,7 +318,6 @@ header{
 /* /Services */
 
 /* Portfolio */
-/* Estilo para o carrossel em linha (Swiper) */
 .portfolio {
     padding: 20px;
     background-color: #f9f9f9; /* Fundo suave */
@@ -336,6 +337,8 @@ header{
     width: 100%;
     height: 700px;
     margin: 10px;
+    margin: 10px auto;
+    padding: 0 20px; /* Evita colar nas laterais da tela */
 }
 
 .card-wrapper {
@@ -400,7 +403,8 @@ header{
 
 .swiper-pagination-bullet-active {
     background-color: #019ca0;
-}  
+}
+/* /Portfolio */  
 
 /* Formulario */
 .contact{
@@ -684,6 +688,8 @@ footer{
 @media (max-width: 600px) {
     .about-photo img {
         max-width: 280px;
+        display: block;
+        margin: 0 auto;
     }
 
     .box-about h2 {
@@ -702,58 +708,73 @@ footer{
 
 /* Responsividade  Services */
 @media (max-width: 768px) {
+    .services h2 {
+        font-size: 1.8rem;
+    }
+
     .services-container {
         flex-direction: column;
         align-items: center;
+        padding: 0 10px;
     }
 
     .services-box {
-        width: 90%; /* Ajusta para ocupar mais espaço em telas pequenas */
+        width: 100%;
+        max-width: 90%;
+    }
+
+    .services-box h3 {
+        font-size: 1.3rem;
+    }
+
+    .service-desc {
+        font-size: 0.9rem;
     }
 }
 
+
 /* Responsividade  Portfolio */
-@media (max-width: 768px) {
-    .portfolio {
-        padding: 20px;
+@media screen and (max-width: 1024px) {
+    .card-link img {
+        width: 300px;
+        height: 300px;
     }
 
     .container {
-        width: 100%;
-    }
-
-    .card-wrapper {
-        flex-wrap: wrap; /* Ajusta os cards para quebrar linha se necessário */
-        justify-content: center;
-        gap: 10px; /* Espaço reduzido entre os cards */
-    }
-
-    .card-item {
-        width: 100%; /* Cada card ocupa 100% da largura do container */
-        max-width: 200px; /* Define uma largura máxima */
-        height: auto; /* Ajusta a altura automaticamente */
-    }
-
-    .swiper-wrapper {
-        flex-wrap: wrap; /* Permite a quebra de linha para os slides */
-    }
-
-    /* Ajustes para os textos */
-    .portfolio h2 {
-        font-size: 2rem; /* Reduz o tamanho do texto */
-        margin-bottom: 20px;
-    }
-
-    /* Botões de navegação do Swiper */
-    .swiper-button-prev,
-    .swiper-button-next {
-        font-size: 1.2rem; /* Reduz o tamanho das setas */
-    }
-    .hero-wrapper img, .about-photo img, .card-link img {
-        max-width: 90%;
-        margin: auto; /* Centraliza a imagem */
-        display: block; /* Garante que ela seja exibida */
+        height: 600px;
     }
 }
+
+@media screen and (max-width: 768px) {
+    .card-link img {
+        width: 250px;
+        height: 250px;
+    }
+
+    .portfolio h2 {
+        font-size: 2rem;
+    }
+
+    .container {
+        height: 550px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .card-link img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        display: none; /* Esconde as setas em telas menores */
+    }
+
+    .container {
+        height: 500px;
+    }
+}
+
 
 /* Responsividade  Contacto */
