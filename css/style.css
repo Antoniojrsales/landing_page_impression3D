@@ -221,6 +221,11 @@ header{
     width: 60%;
 }
 
+.box-about h1{
+    font-size: 2rem;
+    color: var(--text-color-black);
+}
+
 .box-about h2 {
     font-size: 2rem;
     font-weight: bold;
@@ -234,6 +239,10 @@ header{
     color: #555;
     margin-bottom: 25px;
     text-align: justify;
+}
+
+.box-about span{
+    color: var(--color-10);
 }
 
 .btn-container {
@@ -256,6 +265,10 @@ header{
     font-size: 2rem;
     margin-top: 2.5rem;
     color: var(--text-color-black);
+}
+
+.services span{
+    color: var(--color-10);
 }
 
 .services-container{
@@ -326,10 +339,10 @@ header{
 }
 
 .portfolio h2 {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     margin-bottom: 2rem;
     margin-top: 2.5rem;
-    color: #222; /* Cor do título */
+    color: var(--text-color-black)
 }
 
 /* Container do Swiper */
@@ -421,7 +434,7 @@ header{
 }
 
 .contact span{
-    color: var(--color-11);
+    color: var(--color-10);
 }
 
 form{
@@ -778,3 +791,26 @@ footer{
 
 
 /* Responsividade  Contacto */
+@media (max-width: 768px) {
+    .contact-icon-wrapper {
+        flex-direction: column;
+        margin: 30px auto;
+    }
+
+    .contact-icon-content {
+        margin: 1rem 0;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .contact-icon {
+        margin: 0 0 1rem 0;
+    }
+}
+
+@media (max-width: 768px) {
+    footer {
+       text-align: center;
+    }
+}

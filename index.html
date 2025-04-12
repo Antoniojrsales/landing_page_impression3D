@@ -1,15 +1,38 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing Page Impressões 3D</title>
+    <title>Working3DPeru | Impressão 3D sob medida</title>
+
+    <!-- SEO Básico -->
+    <meta name="description" content="Working3DPeru | Especialistas em impressão 3D sob medida no Peru. Criamos peças personalizadas com alta qualidade, rapidez e inovação. Transforme suas ideias em realidade com tecnologia 3D.">
+    <meta name="keywords" content="impressão 3D, Working3DPeru, peças personalizadas 3D, protótipos 3D, design 3D, impressão sob demanda, Lima, Peru, serviços de impressão 3D, tecnologia 3D">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Working3DPeru">
+
+    <!-- Favicon -->
+    <link rel="icon" href="imagens/favicon.ico" type="image/x-icon">
+
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
     integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-    
+
+    <!-- Open Graph (Facebook, LinkedIn, etc) -->
+    <meta property="og:title" content="Working3DPeru | Impressão 3D sob medida">
+    <meta property="og:description" content="Peças personalizadas, protótipos e soluções em impressão 3D com tecnologia de ponta.">
+    <meta property="og:image" content="https://www.seusite.com/imagens/og-image.jpg"> <!-- substitua pelo URL da imagem -->
+    <meta property="og:url" content="https://www.seusite.com">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Working3DPeru | Impressão 3D sob medida">
+    <meta name="twitter:description" content="Soluções criativas e profissionais em impressão 3D no Peru.">
+    <meta name="twitter:image" content="https://www.seusite.com/imagens/og-image.jpg"> <!-- mesma imagem do OG -->
+
 </head>
 <body>
     <!-- Header -->
@@ -74,7 +97,7 @@
         </div>
         
         <div class="box-about">
-            <h1 class="about-title">Sobre Nosotros</h1>
+            <h1 class="about-title">Sobre <span>Nosotros</span></h1>
             <div class="section-subtitle">
                 <h2>Innovación y precisión: la revolución de la impresión 3D</h2>
                 <h4>
@@ -102,7 +125,7 @@
     
     <!-- Service -->
     <section class="services" id="services">
-        <h2>Nossos <span>Serviços</span></h2>
+        <h2>Nuestro <span>Servicios</span></h2>
         <div class="services-container">
             <div class="services-box">
                 <i class="fa-solid fa-paintbrush"></i>
@@ -276,9 +299,18 @@
 <script>
     const toggle = document.getElementById("menu-toggle");
     const nav = document.querySelector(".nav");
-  
+
     toggle.addEventListener("click", () => {
-      nav.classList.toggle("active");
+        nav.classList.toggle("active");
+    });
+
+    // Fecha o menu ao clicar em qualquer link
+    const navItems = document.querySelectorAll('.nav a');
+
+    navItems.forEach(item => {
+        item.addEventListener('click', () => {
+            nav.classList.remove('active');
+        });
     });
 </script>
   
