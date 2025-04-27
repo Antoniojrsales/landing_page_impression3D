@@ -108,6 +108,38 @@ header{
   
 /* /Header */
 
+/* Button Zap */
+.zap-link{
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    top: 90px;
+    right: 40px;
+    background-color: #25d366;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 40px;
+    box-shadow: 1px 1px 2px #888;
+    z-index: 1000;
+    transition: transform 0.3s ease-in-out;
+    
+}
+
+.zap-link:hover {
+    transform: scale(1.1);
+}
+
+.fa-brands{
+    margin-top: 12px;
+    color: var(--text-color-white);
+    width: 60px;
+    height: 50px;
+}
+/* /Button Zap */
+
 /* Hero */
 .hero {
     display: flex;
@@ -361,6 +393,8 @@ header{
 }
 
 .card-item {
+    display: flex;
+    align-items: center;
     flex-shrink: 0; /* Garante que os itens não sejam redimensionados */
     border-radius: 10px;
     overflow: hidden;
@@ -373,8 +407,8 @@ header{
 }
 
 .card-link img {
-    width: 400px;
-    height: 400px;
+    width: 480px;
+    height: 480px;
     object-fit: cover; /* Ajusta a imagem para preencher o card */
     transition: all 0.3s ease-in-out;
     border-radius: 15px;
@@ -560,6 +594,7 @@ footer{
     .menu-toggle {
       display: block;
       z-index: 1001;
+      padding: 10px;
     }
   
     .nav {
@@ -812,5 +847,20 @@ footer{
 @media (max-width: 768px) {
     footer {
        text-align: center;
+    }
+}
+
+/* Responsividade  Botao zap */
+@media screen and (max-width: 600px) {
+    .zap-link {
+        width: 50px;
+        height: 50px;
+        top: 80px;
+        right: 10px;
+        font-size: 30px;
+    }
+
+    .fa-brands {
+        margin-top: 18px;        
     }
 }

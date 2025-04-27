@@ -51,6 +51,16 @@
     </header>
     <!-- /Header -->
 
+    <!-- Button Zap -->
+    <section class="button-zap">
+        <div class="zap-link">
+            <a id="whatsapp-link" target="_blank">
+                <i class="fa-brands fa-whatsapp"></i>
+            </a>
+        </div>
+    </section>   
+    <!-- /Button Zap -->    
+
     <!-- /Hero -->
     <section class="hero" id="hero">
         <div class="left-section">
@@ -138,11 +148,11 @@
                 <h3>MODELADO 3D</h3>
                 <p class="service-desc">Creamos modelos 3D a partir de fotografías, ideas o dibujos técnicos.</p>
             </div>
-            <div class="services-box">
+            <!-- <div class="services-box">
                 <i class="fa-solid fa-magic"></i>
                 <h3>REPRESENTACIÓN</h3>
                 <p class="service-desc">Procesamos tu modelo 3D para crear imágenes o animaciones realistas.</p>
-            </div>
+            </div> -->
             <div class="services-box">
                 <i class="fa-solid fa-cube"></i>
                 <h3>IMPRESIÓN 3D</h3>
@@ -281,7 +291,7 @@
             </div>
 
             <div class="input-box">
-                <input type="tel" name="telefone" placeholder="N° Teléfono Ex:(00) 000-0000" pattern="\(\d{2}\) \d{5}-\d{4}" required="">
+                <input type="tel" name="telefone" placeholder="N° Teléfono Ex:(00) 000-0000" pattern="\(\d{2}\) \d{3}-\d{4}" required="">
                 <input type="text" id="assunto" name="subject" placeholder="Ingrese el asunto" required="">
             </div>
 
@@ -291,7 +301,7 @@
                 <button type="submit" class="btn-form">Enviar mensaje</button>
             </div>  
             <input type="hidden" name="_captcha" value="false"> 
-            <input type="hidden" name="_next" value="https://messagem-obg-formulario.netlify.app/">         
+            <input type="hidden" name="_next" value="https://message-obg-formulario.netlify.app/">         
         </form>
 
         <div class="contact-icon-wrapper">
@@ -311,7 +321,7 @@
                 </div>
                 <div class="contact-info">
                     <span>E-mail</span>
-                    <a href="mailto:antoniogomes.junio@gmail.com">angeelltk@gmail.com</a>
+                    <a href="mailto:angeelltk@gmail.com">angeelltk@gmail.com</a>
                 </div>
             </div>
             
@@ -384,5 +394,21 @@
         });
     });
 </script>
+
+<script>
+    // Captura o elemento do link
+    var whatsappLink = document.getElementById("whatsapp-link");
+    var phoneNumber = "51947213923"; // Seu número do WhatsApp
+
+    // Verifica se o usuário está em um celular ou PC
+    if (/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+        // Se for um celular, abre no app
+        whatsappLink.href = "https://api.whatsapp.com/send?phone=" + phoneNumber;
+    } else {
+        // Se for um PC, abre no WhatsApp Web
+        whatsappLink.href = "https://web.whatsapp.com/send?phone=" + phoneNumber;
+    }
+</script>
+
 </body>
 </html>
